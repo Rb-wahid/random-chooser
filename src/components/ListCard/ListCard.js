@@ -1,10 +1,10 @@
 import React from "react";
 import List from "../List/List";
 import "./ListCard.css";
-const ListCard = ({ list, handleChooseAgain }) => {
+const ListCard = ({ list, handleChooseAgain, handleDeleteIcon }) => {
   function randomChoose() {
-      let randomIndex = Math.floor(Math.random() * list.length);
-      console.log(list[randomIndex]);
+    let randomIndex = Math.floor(Math.random() * list.length);
+    console.log(list[randomIndex]);
   }
   return (
     <div className="list-card">
@@ -12,7 +12,7 @@ const ListCard = ({ list, handleChooseAgain }) => {
 
       <div className="list-container">
         {list.map((item) => (
-          <List key={item.id} item={item} />
+          <List key={item.id} item={item} handleDeleteIcon={handleDeleteIcon} />
         ))}
       </div>
 

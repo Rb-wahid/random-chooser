@@ -22,9 +22,14 @@ const UI = () => {
     }
     setList(newList);
   }
-    
-    function handleChooseAgain() {
-      setList([])
+
+  function handleChooseAgain() {
+    setList([]);
+  }
+
+  function handleDeleteIcon(id) {
+    let rest = list.filter((item) => item.id !== id);
+    setList(rest);
   }
 
   return (
@@ -39,7 +44,11 @@ const UI = () => {
         ))}
       </div>
       <div>
-        <ListCard list={list} handleChooseAgain={handleChooseAgain} />
+        <ListCard
+          list={list}
+          handleChooseAgain={handleChooseAgain}
+          handleDeleteIcon={handleDeleteIcon}
+        />
       </div>
     </div>
   );
