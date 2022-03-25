@@ -1,0 +1,36 @@
+.card {
+  width: 290px;
+  height: 420px;
+  border: 1px solid rgba(153, 153, 153, 0.603);
+  border-radius: 15px;
+  position: relative;
+}
+
+img {
+  width: 280px;
+  height: 280px;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+.product-details {
+  padding-left: 10px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+.btn-add-to-list {
+  position: absolute;
+  bottom: 1.5%;
+  width: 97%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(252, 186, 65, 0.63);
+}
+
+.btn-add-to-list:hover {
+  background-color: orange;
+}
