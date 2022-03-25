@@ -22,6 +22,10 @@ const UI = () => {
     }
     setList(newList);
   }
+    
+    function handleChooseAgain() {
+      setList([])
+  }
 
   return (
     <div className="container">
@@ -35,7 +39,7 @@ const UI = () => {
         ))}
       </div>
       <div>
-        <ListCard list={list} />
+        <ListCard list={list} handleChooseAgain={handleChooseAgain} />
       </div>
     </div>
   );

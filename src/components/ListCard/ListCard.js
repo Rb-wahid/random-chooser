@@ -1,7 +1,11 @@
 import React from "react";
 import List from "../List/List";
 import "./ListCard.css";
-const ListCard = ({ list }) => {
+const ListCard = ({ list, handleChooseAgain }) => {
+  function randomChoose() {
+      let randomIndex = Math.floor(Math.random() * list.length);
+      console.log(list[randomIndex]);
+  }
   return (
     <div className="list-card">
       <h3 className="text-center">Selected Products</h3>
@@ -13,8 +17,12 @@ const ListCard = ({ list }) => {
       </div>
 
       <div className="btn-group">
-        <button className="btn-choose-for-me">CHOOSE ONE FOR ME</button>
-        <button className="btn-choose-again">CHOOSE AGAIN</button>
+        <button className="btn-choose-for-me" onClick={randomChoose}>
+          CHOOSE ONE FOR ME
+        </button>
+        <button className="btn-choose-again" onClick={handleChooseAgain}>
+          CHOOSE AGAIN
+        </button>
       </div>
     </div>
   );
