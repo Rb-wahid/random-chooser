@@ -7,6 +7,10 @@
   border-radius: 15px;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .btn-group {
   display: flex;
   flex-direction: column;
@@ -32,7 +36,6 @@
   margin-top: 12px;
   padding: 12px 28px;
   border-radius: 8px;
-  
 }
 
 .btn-choose-again:hover {

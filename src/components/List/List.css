@@ -1,0 +1,18 @@
+.list {
+  display: flex;
+  align-items: center;
+  background-color: rgba(167, 163, 163, 0.158);
+  margin: 8px;
+  border-radius: 8px;
+}
+
+.list img {
+  padding: 0 15px;
+  width: 35px;
+  height: 35px;
+  border-radius: 8px;
+}
+
+.list h5 {
+  margin: 15px 0;
+}

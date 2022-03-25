@@ -1,6 +1,6 @@
 import React from "react";
 import "./Product.css";
-const Product = ({ product: { name, price, img } }) => {
+const Product = ({ product: { id, name, price, img }, handleAddToList }) => {
   return (
     <div className="card">
       <img src={img} alt="" />
@@ -9,7 +9,12 @@ const Product = ({ product: { name, price, img } }) => {
         <p>Price: ৳{price}</p>
       </div>
       <div className="btn">
-        <button className="btn-add-to-list">ADD TO LIST</button>
+        <button
+          className="btn-add-to-list"
+          onClick={() => handleAddToList({ id, name, img })}
+        >
+          ADD TO LIST
+        </button>
       </div>
     </div>
   );

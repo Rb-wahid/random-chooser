@@ -6,6 +6,7 @@ import "./UI.css";
 
 const UI = () => {
   const [products, setProducts] = useState([]);
+  const [list, setList] = useState([]);
 
   useEffect(() => {
     fetch("products.json")
@@ -13,15 +14,24 @@ const UI = () => {
       .then((data) => setProducts(data));
   }, []);
 
+  function handleAddToList(product) {
+    let newList = [...list, product];
+    setList(newList);
+  }
+
   return (
     <div className="container">
       <div className="product-container">
         {products.map((product) => (
-          <Product key={product.id} product={product} />
+          <Product
+            key={product.id}
+            product={product}
+            handleAddToList={handleAddToList}
+          />
         ))}
       </div>
       <div>
-        <ListCard />
+        <ListCard list={list} />
       </div>
     </div>
   );
