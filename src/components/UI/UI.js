@@ -15,7 +15,11 @@ const UI = () => {
   }, []);
 
   function handleAddToList(product) {
-    let newList = [...list, product];
+    let newList = list.slice();
+    let isExit = newList.find((item) => item.id === product.id);
+    if (!isExit) {
+      newList.push(product);
+    }
     setList(newList);
   }
 
