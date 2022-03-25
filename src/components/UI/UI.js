@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import ListCard from "../ListCard/ListCard";
 import Product from "../Product/Product";
 import "./UI.css";
 
@@ -18,6 +19,9 @@ const UI = () => {
         {products.map((product) => (
           <Product key={product.id} product={product} />
         ))}
+      </div>
+      <div>
+        <ListCard />
       </div>
     </div>
   );

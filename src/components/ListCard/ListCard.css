@@ -1,0 +1,41 @@
+.list-card {
+  width: 250px;
+  padding: 0 15px;
+
+  padding-top: 20px;
+  border: 1px solid rgba(153, 153, 153, 0.603);
+  border-radius: 15px;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  margin: 36px auto 15px;
+}
+
+.btn-choose-for-me {
+  color: green;
+  border: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+}
+
+.btn-choose-for-me:hover {
+  color: white;
+  background-color: green;
+}
+
+.btn-choose-again {
+  color: rgb(128, 0, 117);
+  border: 0;
+  margin-top: 12px;
+  padding: 12px 28px;
+  border-radius: 8px;
+  
+}
+
+.btn-choose-again:hover {
+  color: white;
+  background-color: rgb(128, 0, 117);
+}
