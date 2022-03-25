@@ -1,4 +1,5 @@
 import React from "react";
+import { BsHandIndexThumb } from "react-icons/bs";
 import "./Product.css";
 const Product = ({ product: { id, name, price, img }, handleAddToList }) => {
   return (
@@ -13,7 +14,8 @@ const Product = ({ product: { id, name, price, img }, handleAddToList }) => {
           className="btn-add-to-list"
           onClick={() => handleAddToList({ id, name, img })}
         >
-          ADD TO LIST
+          <div>ADD TO LIST</div>
+          <BsHandIndexThumb className="icon" />
         </button>
       </div>
     </div>

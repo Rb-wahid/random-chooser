@@ -1,9 +1,10 @@
 .card {
   width: 290px;
-  height: 420px;
+  height: 430px;
   border: 1px solid rgba(153, 153, 153, 0.603);
   border-radius: 15px;
   position: relative;
+  font-weight: 500;
 }
 
 img {
@@ -29,8 +30,16 @@ img {
   border: none;
   border-radius: 8px;
   background-color: rgba(252, 186, 65, 0.63);
+  display: flex;
+  justify-content: center;
+  font-size: medium;
+  font-weight: 600;
 }
 
 .btn-add-to-list:hover {
   background-color: orange;
+}
+
+.icon {
+  padding-left: 8px;
 }
