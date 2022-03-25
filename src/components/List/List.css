@@ -1,6 +1,8 @@
 .list {
   display: flex;
   align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
   background-color: rgba(167, 163, 163, 0.158);
   margin: 8px;
   border-radius: 8px;
@@ -15,4 +17,12 @@
 
 .list h5 {
   margin: 15px 0;
+}
+
+.icon-delete {
+  font-size: large;
+  cursor: pointer;
+}
+.icon-delete:hover {
+  color: red;
 }
