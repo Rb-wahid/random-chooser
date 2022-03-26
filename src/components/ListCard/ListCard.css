@@ -1,10 +1,12 @@
 .list-card {
-  width: 250px;
+  width: 260px;
   padding: 0 15px;
 
   padding-top: 20px;
   border: 1px solid rgba(153, 153, 153, 0.603);
   border-radius: 15px;
+  position: sticky;
+  top: 80px;
 }
 
 .text-center {
