@@ -44,3 +44,20 @@
   color: white;
   background-color: rgb(128, 0, 117);
 }
+
+.modal-warning {
+  height: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  font-weight: bolder;
+}
+
+.modal-close-button {
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

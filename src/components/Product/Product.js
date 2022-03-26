@@ -1,7 +1,8 @@
 import React from "react";
 import { BsHandIndexThumb } from "react-icons/bs";
 import "./Product.css";
-const Product = ({ product: { id, name, price, img }, handleAddToList }) => {
+const Product = ({ product, handleAddToList }) => {
+  const { name, price, img } = product;
   return (
     <div className="card">
       <img src={img} alt="" />
@@ -12,7 +13,7 @@ const Product = ({ product: { id, name, price, img }, handleAddToList }) => {
       <div className="btn">
         <button
           className="btn-add-to-list"
-          onClick={() => handleAddToList({ id, name, img })}
+          onClick={() => handleAddToList(product)}
         >
           <div>ADD TO LIST</div>
           <BsHandIndexThumb className="icon" />
