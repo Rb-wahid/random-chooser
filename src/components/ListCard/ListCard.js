@@ -15,6 +15,7 @@ const customStyles = {
     height: "250px",
     width: "300px",
     overflow: "auto",
+    backgroundColor: "#f7f7f7af",
   },
 };
 
@@ -39,7 +40,7 @@ const ListCard = ({ list, handleChooseAgain, handleDeleteIcon }) => {
   }
   return (
     <div className="list-card">
-      <h3 className="text-center">Selected Products</h3>
+      <h3 className="text-center">Selected Items</h3>
 
       <div className="list-container">
         {list.map((item) => (
@@ -66,11 +67,15 @@ const ListCard = ({ list, handleChooseAgain, handleDeleteIcon }) => {
         )}
         {randomProduct && (
           <>
-            <h2>This is for you</h2>
-            <div className="list">
+            <h2 className="text-center" style={{ color: "green" }}>
+              You can buy this one
+            </h2>
+            <div className="choosed-item">
               <img src={randomProduct.img} alt="" />
-              <h5>{randomProduct.name}</h5>
-              <h5>৳{randomProduct.price}</h5>
+              <div className="choosed-item-detail">
+                <h5>{randomProduct.name}</h5>
+                <h5>Price: ৳{randomProduct.price}</h5>
+              </div>
             </div>
           </>
         )}

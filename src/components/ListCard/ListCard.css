@@ -63,3 +63,17 @@
   border: none;
   cursor: pointer;
 }
+
+.choosed-item{
+  display: flex;
+}
+.choosed-item img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding-right: 16px;
+}
+
+.choosed-item-detail{
+
+}
