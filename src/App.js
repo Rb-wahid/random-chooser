@@ -5,10 +5,12 @@ import UI from "./components/UI/UI";
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <UI />
-      <QnA/>
+    <div className="body">
+      <div className="App">
+        <Header />
+        <UI />
+        <QnA />
+      </div>
     </div>
   );
 }
