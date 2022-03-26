@@ -37,12 +37,18 @@ const UI = () => {
   function handleAddToList(product) {
     let newList = list.slice();
     let isExit = newList.find((item) => item.id === product.id);
-    if (!isExit) {
-      newList.push(product);
-    }
-    if (newList.length > 4) {
+    if (newList.length < 4) {
+      if (!isExit) {
+        newList.push(product);
+      } else {
+        setError("You already add this item");
+        openModal();
+      }
+      setList(newList);
+    } else {
+      setError("You can not add more than four items");
       openModal();
-    } else setList(newList);
+    }
   }
 
   function handleChooseAgain() {
@@ -55,7 +61,6 @@ const UI = () => {
   }
 
   function openModal() {
-    setError(true);
     setModal(true);
   }
 
@@ -89,9 +94,7 @@ const UI = () => {
 
         {error && (
           <>
-            <h2 className="modal-warning">
-              You can to add more than four items
-            </h2>
+            <h2 className="modal-warning">{error}</h2>
           </>
         )}
       </Modal>
