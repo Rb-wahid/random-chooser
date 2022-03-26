@@ -33,7 +33,7 @@ const ListCard = ({ list, handleChooseAgain, handleDeleteIcon }) => {
   }
 
   function randomChoose() {
-    let randomIndex = Math.floor(Math.random() * list.length) || [];
+    let randomIndex = Math.floor(Math.random() * list.length);
     setRandomProduct(list[randomIndex]);
     openModal();
   }
