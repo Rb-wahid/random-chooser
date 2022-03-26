@@ -1,5 +1,6 @@
 .container {
   margin-top: 36px;
+   margin-bottom: 80px;
   display: grid;
   grid-template-columns: 4fr 1fr;
 }
@@ -8,4 +9,19 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding-right: 48px;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    position: relative;
+  }
+  .product-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 32px;
+    padding-right: 0;
+  }
 }
