@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react";
+import "./Header.css";
 
 const Header = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  return (
+    <div className="header-container">
+      <h1>Random Chooser</h1>
+      <h3>Choose Four Items</h3>
+    </div>
+  );
 };
 
 export default Header;
