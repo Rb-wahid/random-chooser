@@ -1,7 +1,14 @@
 .App {
-  text-align: center;
+  max-width: 1255px;
+  margin: auto;
 }
 
+@media screen and (max-width: 767px) {
+  .App {
+    max-width: 767px;
+    margin: auto;
+  }
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
